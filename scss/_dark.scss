@@ -7,11 +7,11 @@
   }
 
   .card,
-  .navbar-light,
   .footer,
   .modal-content,
   .modal-header,
-  .dropdown-menu {
+  .dropdown-menu,
+  .flatpickr-calendar {
     background-color: $dark;
     color: inherit;
   }
@@ -20,7 +20,7 @@
     border-color: transparent;
   }
 
-  .btn-secondary,
+  .btn-white,
   .form-file-button {
     @include button-variant($dark-mode-lighten, $border-color, $dark-mode-text, rgba($dark, 0), $border-color, $dark-mode-text);
     background-image: none;
@@ -30,7 +30,7 @@
   .form-select,
   .form-file-text,
   .form-control,
-  .form-selectgroup-box,
+  .form-selectgroup-label,
   .flatpickr-input.flatpickr-input,
   .form-selectgroup-check,
   .form-imagecheck-figure:before {
@@ -44,10 +44,6 @@
 
   .input-group-flat .input-group-text {
     background-color: $dark-mode-darken;
-  }
-
-  .navbar {
-    box-shadow: 0 0 0 1px $dark-mode-darken;
   }
 
   .highlight {

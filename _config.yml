@@ -1,7 +1,7 @@
 source: pages
 destination: tmp
 
-version: 1.0.0-alpha.4
+version: 1.0.0-alpha.6
 title: Tabler
 description: Premium and Open Source dashboard template with responsive and high quality UI.
 github_url: https://github.com/tabler/tabler
@@ -11,7 +11,7 @@ mapbox_key: pk.eyJ1IjoiY29kZWNhbG0iLCJhIjoiSzRiOVJvQSJ9.BUVkTT6IYs83xSUs4H7bjQ
 
 debug: false
 
-dark-theme: false
+layout-dark: false
 
 plugins:
   - jekyll-random
@@ -50,10 +50,10 @@ toc:
 collections:
   docs:
     output: true
-  changelog:
-    output: false
-  components:
-    output: true
+#  changelog:
+#    output: false
+#  components:
+#    output: true
 
 defaults:
   - scope:
@@ -130,11 +130,11 @@ variants:
   - name: success
     icon: check
   - name: info
-    icon: info
+    icon: info-circle
   - name: warning
     icon: alert-triangle
   - name: danger
-    icon: x-octagon
+    icon: alert-circle
 
 button-variants:
   primary:

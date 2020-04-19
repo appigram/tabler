@@ -1,15 +1,15 @@
 ---
 title: Buttons
-icon: fe fe-plus-square
-description: Use button styles that best suit your designs and encourage users to take the desired actions. You can customise the button's properties to improve the user experience of your website or system, changing the size, shape, colour and many more.
+description: Use button styles that best suit your designs and encourage users to take the desired actions. You can customize the button's properties to improve the user experience of your website or system, changing the size, shape, color and many more.
 bootstrap-link: components/buttons/
 done: true
+libs: tabler-buttons
 ---
 
 
 ## Button tag
 
-As one of the most common elements of UI design, buttons have a very important function of engaging users with your website or system and guiding them in their actions. Use the `.btn` classes with the `<button>` element and add additional styling that will make your buttons serve their purpose and draw users' attention. 
+As one of the most common elements of UI design, buttons have a very important function of engaging users with your website or app and guiding them in their actions. Use the `.btn` classes with the `<button>` element and add additional styling that will make your buttons serve their purpose and draw users' attention. 
 
 {% capture code %}
 <a href="#" class="btn btn-primary" role="button">Link</a>
@@ -23,7 +23,7 @@ As one of the most common elements of UI design, buttons have a very important f
 
 ## Button variations
 
-Use the button classes that correspond to the function of your button. The big range of available colours will help you show your buttons' purpose and make them easy to spot.
+Use the button classes that correspond to the function of your button. The big range of available colors will help you show your buttons' purpose and make them easy to spot.
 
 {% capture code %}
 {% for button in site.button-variants %}
@@ -49,9 +49,9 @@ Make buttons look inactive to show that an action is possible once the user meet
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
 
-## Colour variations
+## Color variations
 
-Choose the right colour for your button to make it go well with your design and draw users' attention. Button colours can have a big influence on users' decisions, which is why it's important to choose them based on the intended purpose.
+Choose the right color for your button to make it go well with your design and draw users' attention. Button colors can have a big influence on users' decisions, which is why it's important to choose them based on the intended purpose.
 
 {% capture code %}
 {% for button in site.colors %}
@@ -75,7 +75,7 @@ Use the `.btn-ghost-*` class to make your button look simple yet aesthetically a
 
 ## Square buttons
 
-Use the `.btn-square` class to remove border-radius, if you want the corners of your button to be square, not rounded.
+Use the `.btn-square` class to remove the border radius, if you want the corners of your button to be square rather than rounded.
 
 {% capture code %}
 {% for button in site.button-variants %}
@@ -103,7 +103,7 @@ Add the `.btn-pill` class to your button to make it rounded and give it a modern
 
 ## Outline buttons
 
-Replace the default modifier class with the `.btn-outline-*` class, if you want to remove the colour and background of your button and give it a more subtle look. Outline buttons are perfect to use as secondary buttons, as they don't distract users from the main action.
+Replace the default modifier class with the `.btn-outline-*` class, if you want to remove the color and the background of your button and give it a more subtle look. Outline buttons are perfect to use as secondary buttons, as they don't distract users from the main action.
 
 {% capture code %}
 {% for button in site.button-variants %}
@@ -121,13 +121,13 @@ Add `.btn-lg` or `.btn-sm` to change the size of your button and differentiate t
 
 {% capture code %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<button type="button" class="btn btn-white btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
 {% capture code %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-white btn-sm">Small button</button>
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
@@ -135,14 +135,14 @@ You can also add the `.btn-block` class to create block level buttons which span
 
 {% capture code %}
 <button type="button" class="btn btn-primary btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-block">Block level button</button>
+<button type="button" class="btn btn-white btn-block">Block level button</button>
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
 
 ## Buttons with icons
 
-Label your button with text and add an icon to communiacate the action and make it easy to identify for users. Icons are easily recognised and improve the aesthetics of your button design, giving it a modern and atractive look.  
+Label your button with text and add an icon to communiacate the action and make it easy to identify for users. Icons are easily recognized and improve the aesthetics of your button design, giving it a modern and atractive look.  
 
 Icons can be found [**here**](/docs/icons.html#icons)
 
@@ -203,16 +203,16 @@ You can also add an icon without the name of a social networking site, if you wa
 
 ## Icon buttons
 
-Add the `.btn-icon` class to remove unnecessary padding from your button and use an icon without any additional label. Thanks to that, you can save space and make the action easy to recognise for international users.
+Add the `.btn-icon` class to remove unnecessary padding from your button and use an icon without any additional label. Thanks to that, you can save space and make the action easy to recognize for international users.
 
 {% capture code %}
 {% include ui/button.html icon="activity" color="primary" icon-only=true %}
-{% include ui/button.html icon="github" color="github" icon-only=true %}
+{% include ui/button.html icon="brand/github" color="github" icon-only=true %}
 {% include ui/button.html icon="bell" color="success" icon-only=true %}
 {% include ui/button.html icon="star" color="warning" icon-only=true %}
-{% include ui/button.html icon="trash-2" color="danger" icon-only=true %}
-{% include ui/button.html icon="bar-chart" color="purple" icon-only=true %}
-{% include ui/button.html icon="git-merge" color="secondary" icon-only=true %}
+{% include ui/button.html icon="trash" color="danger" icon-only=true %}
+{% include ui/button.html icon="chart-bar" color="purple" icon-only=true %}
+{% include ui/button.html icon="git-merge" color="white" icon-only=true %}
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
@@ -223,21 +223,21 @@ Create a dropdown button that will encourage users to click for more options. Yo
 
 {% capture code %}
 <div class="dropdown">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
      {% include ui/icon.html icon="calendar" %}
   </button>
   {% include ui/dropdown-menu.html %}
 </div>
 
 <div class="dropdown">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
      {% include ui/icon.html icon="calendar" %}Show calendar
   </button>
   {% include ui/dropdown-menu.html %}
 </div>
 
 <div class="dropdown">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
      Show calendar
   </button>
   {% include ui/dropdown-menu.html %}
@@ -272,7 +272,7 @@ Create a list of buttons using the `.btn-list` container to display different ac
 {% capture code %}
 <div class="btn-list">
   <a href="#" class="btn btn-success">Save changes</a>
-  <a href="#" class="btn btn-secondary">Save and continue</a>
+  <a href="#" class="btn btn-white">Save and continue</a>
   <a href="#" class="btn btn-danger">Cancel</a>
 </div>
 {% endcapture %}
@@ -282,25 +282,25 @@ If the list is long, it will be wrapped and some buttons will be moved to the ne
 
 {% capture code %}
 <div class="btn-list">
-  <a href="#" class="btn btn-secondary">One</a>
-  <a href="#" class="btn btn-secondary">Two</a>
-  <a href="#" class="btn btn-secondary">Three</a>
-  <a href="#" class="btn btn-secondary">Four</a>
-  <a href="#" class="btn btn-secondary">Five</a>
-  <a href="#" class="btn btn-secondary">Six</a>
-  <a href="#" class="btn btn-secondary">Seven</a>
-  <a href="#" class="btn btn-secondary">Eight</a>
-  <a href="#" class="btn btn-secondary">Nine</a>
-  <a href="#" class="btn btn-secondary">Ten</a>
-  <a href="#" class="btn btn-secondary">Eleven</a>
-  <a href="#" class="btn btn-secondary">Twelve</a>
-  <a href="#" class="btn btn-secondary">Thirteen</a>
-  <a href="#" class="btn btn-secondary">Fourteen</a>
-  <a href="#" class="btn btn-secondary">Fifteen</a>
-  <a href="#" class="btn btn-secondary">Sixteen</a>
-  <a href="#" class="btn btn-secondary">Seventeen</a>
-  <a href="#" class="btn btn-secondary">Eighteen</a>
-  <a href="#" class="btn btn-secondary">Nineteen</a>
+  <a href="#" class="btn btn-white">One</a>
+  <a href="#" class="btn btn-white">Two</a>
+  <a href="#" class="btn btn-white">Three</a>
+  <a href="#" class="btn btn-white">Four</a>
+  <a href="#" class="btn btn-white">Five</a>
+  <a href="#" class="btn btn-white">Six</a>
+  <a href="#" class="btn btn-white">Seven</a>
+  <a href="#" class="btn btn-white">Eight</a>
+  <a href="#" class="btn btn-white">Nine</a>
+  <a href="#" class="btn btn-white">Ten</a>
+  <a href="#" class="btn btn-white">Eleven</a>
+  <a href="#" class="btn btn-white">Twelve</a>
+  <a href="#" class="btn btn-white">Thirteen</a>
+  <a href="#" class="btn btn-white">Fourteen</a>
+  <a href="#" class="btn btn-white">Fifteen</a>
+  <a href="#" class="btn btn-white">Sixteen</a>
+  <a href="#" class="btn btn-white">Seventeen</a>
+  <a href="#" class="btn btn-white">Eighteen</a>
+  <a href="#" class="btn btn-white">Nineteen</a>
 </div>
 {% endcapture %}
 {% include example.html code=code %}
@@ -309,7 +309,7 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 
 {% capture code %}
 <div class="btn-list justify-content-center">
-  <a href="#" class="btn btn-secondary">Save and continue</a>
+  <a href="#" class="btn btn-white">Save and continue</a>
   <a href="#" class="btn btn-primary">Save changes</a>
 </div>
 {% endcapture %}
@@ -317,7 +317,7 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 
 {% capture code %}
 <div class="btn-list justify-content-end">
-  <a href="#" class="btn btn-secondary">Save and continue</a>
+  <a href="#" class="btn btn-white">Save and continue</a>
   <a href="#" class="btn btn-primary">Save changes</a>
 </div>
 {% endcapture %}
@@ -326,7 +326,7 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 {% capture code %}
 <div class="btn-list">
   <a href="#" class="btn btn-outline-danger mr-auto">Delete</a>
-  <a href="#" class="btn btn-secondary">Save and continue</a>
+  <a href="#" class="btn btn-white">Save and continue</a>
   <a href="#" class="btn btn-primary">Save changes</a>
 </div>
 {% endcapture %}
@@ -335,16 +335,16 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 
 ## Buttons with avatars
 
-Use buttons with avatars to simplify the process of interaction and make your design more personalised. Buttons can contain avatars and labels or only avatars, if displayed on a smaller space. 
+Use buttons with avatars to simplify the process of interaction and make your design more personalized. Buttons can contain avatars and labels or only avatars, if displayed on a smaller space. 
 
 {% capture code %}
-<a href="#" class="btn btn-secondary">
+<a href="#" class="btn btn-white">
   {% include ui/avatar.html person-id="4" %} Avatar
 </a>
-<a href="#" class="btn btn-secondary">
+<a href="#" class="btn btn-white">
   {% include ui/avatar.html person-id="5" %} Avatar
 </a>
-<a href="#" class="btn btn-secondary">
+<a href="#" class="btn btn-white">
   {% include ui/avatar.html person-id="6" %} Avatar
 </a>
 {% endcapture %}

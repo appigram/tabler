@@ -12,13 +12,21 @@ Form label
   font-weight: $font-weight-bold;
   display: block;
   margin-bottom: .5rem;
+
+  &.required {
+    &:after {
+      content: "*";
+      margin-left: .25rem;
+      color: $red;
+    }
+  }
 }
 
 .form-label-description {
   float: right;
   font-weight: $font-weight-normal;
   color: $text-muted;
-  line-height: $line-height-base * (100%/$small-font-size);
+  line-height: 1.5rem;
   font-size: $small-font-size;
 }
 
@@ -73,6 +81,22 @@ Form control
   border-color: transparent;
 }
 
+.form-control-dark {
+  background-color: rgba($black, .1);
+  color: $white;
+  border-color: transparent;
+
+  &:focus {
+    background-color: rgba($black, .1);
+    box-shadow: none;
+    border-color: rgba($white, .24);
+  }
+
+  &::placeholder {
+    color: rgba($white, .6);
+  }
+}
+
 .form-control-rounded {
   border-radius: 10rem;
 }
@@ -98,16 +122,12 @@ Form control
   border-radius: $border-radius;
 }
 
-.form-required {
-  color: $red;
-}
-
 /**
 Form help
  */
 .form-help {
   display: inline-flex;
-  font-weight: 600;
+  font-weight: $font-weight-bold;
   align-items: center;
   justify-content: center;
   width: 1.125rem;
@@ -141,6 +161,7 @@ Form switch
 }
 
 .form-check-input {
+  background-size: $form-check-input-width;
   margin-top: .25rem;
 
   .form-switch & {
@@ -162,14 +183,6 @@ Form switch
 /**
 Input group
  */
-.input-group-prepend .input-group-text {
-  border-right: 0;
-}
-
-.input-group-append .input-group-text {
-  border-left: 0;
-}
-
 .input-group-link {
   font-size: $h5-font-size;
 }
@@ -200,31 +213,17 @@ Input group
     }
   }
 
-  .input-group-prepend {
-    margin-right: 0;
-    border-right: 0;
-    background: $form-check-input-bg;
-
-    .input-group-text {
-      padding-right: 0;
-    }
-  }
-
-  .input-group-append {
-    margin-left: 0;
-
-    &:not(:last-child) .input-group-text {
-      border-right: 0;
-    }
-
-    .input-group-text {
-      padding-left: 0;
-    }
-  }
-
   .input-group-text {
     background: transparent;
     transition: $input-transition;
+
+    &:first-child {
+      padding-right: 0;
+    }
+
+    &:last-child {
+      padding-left: 0;
+    }
   }
 }
 
